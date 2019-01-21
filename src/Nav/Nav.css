@@ -10,7 +10,7 @@
     z-index: 1;
 }
 
-a{
+.navigation .page{
     font-size: 12px;
     font-style: normal;
     color:#0088cc;
@@ -33,7 +33,7 @@ a{
     outline: none;
 }
 
-a:hover {
+.navigation .page:hover {
     font-style: normal;
     background-position: 0 0;
     color:#fff;
@@ -45,7 +45,7 @@ a:hover {
     justify-content: space-between;
 }*/
 
-a.active {
+.navigation .page.active {
     font-style: normal;
     font-weight: bold;
     background-color: #0088cc;

@@ -19,14 +19,14 @@ let y = window.innerHeight * 2;
 
 
 class App extends Component {
-    constructor(props) {
+    /*constructor(props) {
         super(props);
         this.state = {
             current: "active",
             duration: 1500
         };
         // this.handleClick = this.handleClick.bind(this);
-    };
+    };*/
 /*
     handleClick(menuItem) {
         this.setState({active: menuItem});
@@ -38,7 +38,6 @@ class App extends Component {
 
     // menuItems[menuItems.indexOf(window.location.hash.slice(2))]
     render() {
-        console.log(window.location.hash.slice(2));
         return (
             <div>
                 <Nav current={"active"}/>
@@ -46,7 +45,7 @@ class App extends Component {
                     progress={true}
                     fallbackMessage={<p>Sorry, your <b>device or browser</b> couldn't support well.</p>}
                 >
-                    <Step exact path='menuItems[0]' className={window.location.hash.slice(2)==='step-1' ? "active home" : {}}
+                    <Step exact path='menuItems[0]' className={"home"}
                           data={
                               {
                                   x: x,
@@ -58,7 +57,7 @@ class App extends Component {
                                   scale: 2
                               }} duration={750}>
                         <p></p>
-
+                        <button href="#/step-1" className="buy">Buy Now</button>
                     </Step>
                     <Step path='menuItems[1]' className={'about'} data={
                         {
@@ -66,7 +65,7 @@ class App extends Component {
                             y: y - h / 2,
                             z: 10000,
                             rotateX: 0,
-                            rotateY: 0,
+                            rotateY: 45, //ok
                             rotateZ: 0,
                             scale: 1
                         }} duration={750}>
@@ -79,7 +78,7 @@ class App extends Component {
                                   y: y + h / 2,
                                   z: 10000,
                                   rotateX: 0,
-                                  rotateY: 0,
+                                  rotateY: -45,
                                   rotateZ: 0,
                                   scale: 1
                               }}
@@ -93,7 +92,7 @@ class App extends Component {
                                   y: y + h / 2,
                                   z: 10000,
                                   rotateX: 0,
-                                  rotateY: 0,
+                                  rotateY: 45, //ok
                                   rotateZ: 0,
                                   scale: 1
                               }}
@@ -107,7 +106,7 @@ class App extends Component {
                                   y: y - h / 2,
                                   z: 10000,
                                   rotateX: 0,
-                                  rotateY: 0,
+                                  rotateY: -45,
                                   rotateZ: 0,
                                   scale: 1
                               }} duration={750}>
